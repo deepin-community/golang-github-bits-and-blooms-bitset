@@ -1,5 +1,32 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-bits-and-blooms-bitset (1.5.0-1) unstable; urgency=medium
+
+  * New upstream release, required indirectly by ironwood to fix a crash.
+
+ -- John Goerzen <jgoerzen@complete.org>  Tue, 12 Dec 2023 07:48:40 -0600
+
+golang-github-bits-and-blooms-bitset (1.2.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * according to ratt nothing needs to be rebuild
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Mon, 04 Apr 2022 19:49:14 +0200
+
+golang-github-bits-and-blooms-bitset (1.2.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * reverse dependencies successfully built with ratt:
+    - golang-github-willf-bloom
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Fri, 07 Jan 2022 00:09:35 +0100
+
+golang-github-bits-and-blooms-bitset (1.2.0-2) unstable; urgency=medium
+
+  * upload source package
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Thu, 16 Sep 2021 19:32:49 +0000
+
+golang-github-bits-and-blooms-bitset (1.2.0-1) unstable; urgency=medium
 
   * Initial release
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Thorsten Alteholz <debian@alteholz.de>  Sun, 05 Sep 2021 20:08:23 +0000
