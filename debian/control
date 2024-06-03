@@ -1,15 +1,39 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-bits-and-blooms-bitset
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Thorsten Alteholz <debian@alteholz.de>, John Goerzen <jgoerzen@complete.org>
+Section: golang
+Testsuite: autopkgtest-pkg-go
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13),
+               dh-golang,
+               golang-any
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-bits-and-blooms-bitset
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-bits-and-blooms-bitset.git
+Homepage: https://github.com/bits-and-blooms/bitset
+Rules-Requires-Root: no
+XS-Go-Import-Path: github.com/bits-and-blooms/bitset
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-bits-and-blooms-bitset-dev
+Architecture: all
+Depends: ${misc:Depends}
+Multi-Arch: foreign
+Description: implementation of bitsets
+ This package implements bitsets, a mapping between non-negative integers
+ and boolean values.  It should be more efficient than map[uint] bool.
+ .
+ It provides methods for setting, clearing, flipping, and testing
+ individual integers.
+ .
+ But it also provides set intersection, union, difference, complement,
+ and symmetric operations, as well as tests to check whether any, all,
+ or no bits are set, and querying a bitset's current length and number
+ of positive bits.
+ .
+ BitSets are expanded to the size of the largest set bit; the memory
+ allocation is approximately Max bits, where Max is the largest set
+ bit. BitSets are never shrunk. On creation, a hint can be given for the
+ number of bits that will be used.
+ .
+ Many of the methods, including Set, Clear, and Flip, return a BitSet
+ pointer, which allows for chaining.
